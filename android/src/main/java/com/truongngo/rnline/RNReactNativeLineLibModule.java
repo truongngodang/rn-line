@@ -141,7 +141,7 @@ public class RNReactNativeLineLibModule extends ReactContextBaseJavaModule {
               .build();
       Intent loginIntent = LineLoginApi.getLoginIntent(
               this.reactContext,
-              "1588613208",
+              this.reactContext.getString(R.string.line_channel_id),
               params);
       getCurrentActivity().startActivityForResult(loginIntent, REQUEST_CODE);
     } catch (Exception e) {
@@ -177,7 +177,7 @@ public class RNReactNativeLineLibModule extends ReactContextBaseJavaModule {
 
   private LineApiClient getLineApiClient() {
     if (lineApiClient == null) {
-      String channelId = "1588613208";
+      String channelId = this.reactContext.getString(R.string.line_channel_id);
       lineApiClient = new LineApiClientBuilder(this.reactContext, channelId).build();
     }
     return lineApiClient;
