@@ -1,6 +1,6 @@
 {
-  "name": "react-native-line-lib",
-  "version": "1.0.0",
+  "name": "rn-line",
+  "version": "1.0.1",
   "description": "",
   "main": "index.js",
   "scripts": {
