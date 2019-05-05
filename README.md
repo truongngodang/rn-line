@@ -2,7 +2,7 @@
 # rn-line
 
 ## Requirements
-- React native `0.48.+`.
+- React native `0.54.+`.
 - LineSDK iOS `5.0.0` and Android `5.0.1`.
 
 ## Getting started
@@ -18,6 +18,8 @@
 
 
 #### iOS
+
+First Step follow all the configuration steps in https://developers.line.biz/en/docs/ios-sdk/swift/setting-up-project/
 
 `$ pod install`
 
@@ -40,7 +42,10 @@
   	```
       compile project(':rn-line')
   	```
-
+4. Add the string line_channel_id to your strings file with the the channel id that you have on your line console.
+```
+<string name="line_channel_id" translatable="false">Your channel id here</string>
+```
 
 ## Usage
 ```javascript
