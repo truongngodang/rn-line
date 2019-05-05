@@ -1,6 +1,10 @@
 
 # rn-line
 
+## Requirements
+- React native `0.48.+`.
+- LineSDK iOS `5.0.0` and Android `5.0.1`.
+
 ## Getting started
 
 `$ npm install rn-line --save`
@@ -14,6 +18,8 @@
 
 
 #### iOS
+
+`$ pod install`
 
 1. In XCode, in the project navigator, right click `Libraries` ➜ `Add Files to [your project's name]`
 2. Go to `node_modules` ➜ `rn-line` and add `RNline.xcodeproj`
@@ -38,9 +44,87 @@
 
 ## Usage
 ```javascript
-import RNLine from 'rn-line';
-
-// TODO: What to do with the module?
-RNLine;
+import LineSDK from 'rn-line';
 ```
-  # rn-line
+### Login
+```javascript
+LineSDK.login(permission: Array, botPrompt: String);
+```
+Example
+```javascript
+_login = async () => {
+  try {
+    const resIn = await LineSDK.login(['PROFILE'], 'aggressive');
+    console.log(resIn);
+  } catch (e) {
+    console.log(e)
+  }
+};
+```
+### Logout
+```javascript
+LineSDK.logout();
+```
+Example
+```javascript
+_logout = async () => {
+  try {
+    const resOut = await LineSDK.logout();
+    console.log(resOut);
+  } catch (e) {
+    console.log(e);
+    console.log({ ...e });
+  }
+};
+```
+### Get Profile
+```javascript
+LineSDK.getUserProfile();
+```
+Example
+```javascript
+_getProfile = async () => {
+    try {
+      const resOut = await LineSDK.getUserProfile();
+      console.log(resOut);
+    } catch (e) {
+      console.log(e);
+      console.log({ ...e });
+    }
+};
+```
+
+### Get AccessToken
+```javascript
+LineSDK.getAccessToken();
+```
+Example
+```javascript
+_getAccessToken = async () => {
+  try {
+    const resOut = await LineSDK.getAccessToken();
+    console.log(resOut);
+  } catch (e) {
+    console.log(e);
+    console.log({ ...e });
+  }
+};
+```
+
+### Get FriendshipStatus
+```javascript
+LineSDK.getFriendshipStatus()
+```
+```javascript
+_getFriendshipStatus = async () => {
+  try {
+    const resOut = await LineSDK.getFriendshipStatus();
+    console.log(resOut);
+  } catch (e) {
+    console.log(e);
+    console.log({ ...e });
+  }
+};
+
+```
+# Thank you!
