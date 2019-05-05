@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
-    "react-native"
+    "react-native, react-native-line, LineSDK, Line Login, Android, IOS"
   ],
   "repository": {
     "type": "git",
